@@ -15,13 +15,14 @@
 	//Cria uma função que recebe e exibe uma frase
 	function mostra(dado) {
 	document.write(dado);
-	document.write("Seja Bem Vindo!");
 	} 
 	function calculaIMC() {
 		var peso = 73;
 		var altura = 1.70;
 		var imc = peso / (altura * altura);
-		mostra("Seu Imc é:" + imc);
+		//Passando para a função mostra exibir o resultado.
+		//Usamos o método round da classe Math para arredondar.
+		mostra("Seu Imc é:" + Math.round(imc));
 	}
 	//Chama a função para a realização do cálculo.
 	calculaIMC();
