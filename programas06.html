@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Trabalhando com Funções</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Funções com Parâmetros no JavaScript</h1>
+	<script type="text/javascript">
+	//Declara e nomea uma função chamada pulaLinha
+	function pulaLinha () {
+		//Corpo da função, bloco de código que realiza uma tarefa.
+		document.write("<br>");
+	}
+	//Cria uma função que recebe e exibe uma frase
+	function mostra(dado) {
+	document.write(dado);
+	pulaLinha();
+	} 
+	function calculaIMC(peso, altura = 1.70) {
+		
+		var imc = peso / (altura * altura);
+		//Passando para a função mostra exibir o resultado.
+		//Usamos o método round da classe Math para arredondar.
+		mostra("Seu Imc é:" + Math.round(imc));
+	}
+	//Chama a função para a realização do cálculo.
+	calculaIMC(80);
+	</script>
+</body>
+</html>
