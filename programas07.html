@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Trabalhando com Funções e Entrada de Dados</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Capiturar informações do Usuário</h1>
+	<script type="text/javascript">
+	//Declara e nomea uma função chamada pulaLinha
+	function pulaLinha () {
+		//Corpo da função, bloco de código que realiza uma tarefa.
+		document.write("<br>");
+	}
+	//Cria uma função que recebe e exibe uma frase
+	function mostra(dado) {
+	document.write(dado);
+	pulaLinha();
+	} 
+	function calculaIMC() {
+		/*A função prompt captura a entrada de dados do teclado do usuario*/
+		var peso = prompt("Informe seu peso")
+		var altura = prompt("Informe sua altura")
+		var imc = peso / (altura * altura);
+		//Passando para a função mostra exibir o resultado.
+		//Usamos o método round da classe Math para arredondar.
+		mostra("Seu Imc é:" + Math.round(imc));
+	}
+	//Chama a função para a realização do cálculo.
+	calculaIMC(80);
+	</script>
+</body>
+</html>
